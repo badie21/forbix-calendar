@@ -310,9 +310,7 @@ const Calendar: FC<ICalendarProps> = ({
           }}
         >
           <span className={styles['day-content']}>
-            {locale === 'fa'
-              ? currentDay.jDate().toLocaleString('fa')
-              : currentDay.date()}
+            {locale === 'fa' ? currentDay.jDate() : currentDay.date()}
           </span>
         </div>
       );
