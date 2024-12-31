@@ -62,8 +62,8 @@ const DatePicker: FC<IDatePickerProps> = ({
   };
 
   return (
-    <Row className={styles['datePicker-container']}>
-      <Col span={24}>
+    <Row>
+      <Col className={styles['datePicker-container']} span={24}>
         <Calendar
           onChange={changeDateHandler}
           startDate={date.from}
@@ -84,7 +84,8 @@ const DatePicker: FC<IDatePickerProps> = ({
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          padding: '1rem 2rem'
+          padding: '1rem 2rem',
+          maxWidth: '400px'
         }}
       >
         <Button
