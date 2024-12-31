@@ -1,0 +1,104 @@
+{
+  "plugins": [
+    "@typescript-eslint",
+    "import"
+  ],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "prettier",
+    "next"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "@typescript-eslint/padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": [
+          "const",
+          "let",
+          "var"
+        ],
+        "next": [
+          "const",
+          "let",
+          "var"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": [
+          "case",
+          "default"
+        ],
+        "next": "*"
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "const",
+          "let",
+          "var",
+          "function"
+        ]
+      },
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": [
+          "return"
+        ]
+      }
+    ],
+    "prefer-const": "error",
+    "import/order": [
+      "warn",
+      {
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        },
+        "groups": [
+          [
+            "builtin",
+            "external"
+          ],
+          [
+            "internal",
+            "parent",
+            "sibling",
+            "index"
+          ]
+        ]
+      }
+    ]
+  },
+  "globals": {
+    "BatcheEndpointsEnum": "readonly"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}

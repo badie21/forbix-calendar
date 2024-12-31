@@ -1,0 +1,6 @@
+.husk
+.idea
+.next
+public
+node_modules
+*.md
