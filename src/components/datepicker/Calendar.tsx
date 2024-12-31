@@ -310,13 +310,15 @@ const Calendar: FC<ICalendarProps> = ({
           }}
         >
           <span className={styles['day-content']}>
-            {locale === 'fa' ? currentDay.jDate() : currentDay.date()}
+            {locale === 'fa'
+              ? currentDay.jDate().toLocaleString('fa')
+              : currentDay.date()}
           </span>
         </div>
       );
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [startDate, endDate, state.hoveredDay, type, disablePreviousDays]
+    [startDate, endDate, state.hoveredDay, type, disablePreviousDays, locale]
   );
 
   const renderCalendar = (year: number, month: number) => {
